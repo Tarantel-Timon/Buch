@@ -2,7 +2,7 @@
 /**
  * Beschreiben Sie hier die Klasse Buchverwaltung.
  * 
- * @author (Ihr Name) 
+ * @Timon 
  * @version (eine Versionsnummer oder ein Datum)
  */
 public class Buchverwaltung
@@ -12,7 +12,11 @@ public class Buchverwaltung
     int speicher;
     int ende = buchregal.length;
     int anfang = 0;
-    
+    String sortierArt;
+    public Buchverwaltung(String sortierArt){
+        this.sortierArt = sortierArt;
+        buecherspeichern();
+    }
     
     public void buecherspeichern(){
         buchregal[0] = new Buch("Bibel", "Gott", 23489);
@@ -22,47 +26,49 @@ public class Buchverwaltung
         buchregal[4] = new Buch("Frühling auf Schottisch", "Karin Lindberg", 34677);
     }
 
-    public void buechersortierenTitel(){    
-        for(int anfang = 0; anfang < ende; anfang++)
-        {
-            for(int aktuell = 0; aktuell < ende; aktuell++)
-            {      
-                if(buchregal[anfang].getTitel().compareTo(buchregal[aktuell].getTitel())<0)    //Es wird gespeichert wo das Beste ist
-                {
+    public void buechersortieren(){    
+        if(sortierArt == "Titel"){
+            for(int anfang = 0; anfang < ende; anfang++)
+            {
+                for(int aktuell = 0; aktuell < ende; aktuell++)
+                {      
+                    if(buchregal[anfang].getTitel().compareTo(buchregal[aktuell].getTitel())<0)    //Es wird gespeichert wo das Beste ist
+                    {
                       tausche(anfang, aktuell);
+                    }
                 }
             }
-        }
-        buecherausgeben();
-    }   
-    
-    public void buechersortierenIsbn(){    
-        for(int anfang = 0; anfang < ende; anfang++)
-        {
-            for(int aktuell = 0; aktuell < ende; aktuell++)
-            {      
-                if(buchregal[anfang].getIsbn() < buchregal[aktuell].getIsbn())    //Es wird gespeichert wo das Beste ist
-                {
+            buecherausgeben();
+            }
+                else if(sortierArt == "Isbn")
+            {
+            for(int anfang = 0; anfang < ende; anfang++)
+            {
+                for(int aktuell = 0; aktuell < ende; aktuell++)
+                {      
+                    if(buchregal[anfang].getIsbn() < buchregal[aktuell].getIsbn())    //Es wird gespeichert wo das Beste ist
+                    {
                       tausche(anfang, aktuell);
+                    }
                 }
             }
-        }
-        buecherausgeben();
-    }   
-    
-    public void buechersortierenAutor(){    
-        for(int anfang = 0; anfang < ende; anfang++)
-        {
-            for(int aktuell = 0; aktuell < ende; aktuell++)
-            {      
-                if(buchregal[anfang].getAutor().compareTo(buchregal[aktuell].getAutor())<0)    //Es wird gespeichert wo das Beste ist
-                {
-                      tausche(anfang, aktuell);
+            buecherausgeben();
+            }
+                else if(sortierArt == "Autor")
+            {
+                for(int anfang = 0; anfang < ende; anfang++)
+            {
+                for(int aktuell = 0; aktuell < ende; aktuell++)
+                {      
+                    if(buchregal[anfang].getAutor().compareTo(buchregal[aktuell].getAutor())<0)    //Es wird gespeichert wo das Beste ist
+                    {
+                        tausche(anfang, aktuell);
+                    }
                 }
             }
-        }
-        buecherausgeben();
-    } 
+            buecherausgeben();
+            }
+    }
     
     public void buecherausgeben(){
         for(int i = 0; i < buchregal.length;i++){

@@ -10,9 +10,9 @@ public class Buch
     private String titel, autor;
     private int isbn;
     public Buch(String titel, String autor, int isbn){
-        this.titel=titel;
-        this.autor=autor;
-        this.isbn=isbn;
+        this.titel = titel;
+        this.autor = autor;
+        this.isbn = isbn;
     }
     
     public String getTitel(){

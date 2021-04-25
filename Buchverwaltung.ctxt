@@ -1,16 +1,14 @@
 #BlueJ class context
 comment0.target=Buchverwaltung
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Buchverwaltung.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
-comment1.params=
-comment1.target=void\ buecherspeichern()
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Buchverwaltung.\r\n\ \r\n\ @Timon\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=sortierArt
+comment1.target=Buchverwaltung(java.lang.String)
 comment2.params=
-comment2.target=void\ buechersortierenTitel()
+comment2.target=void\ buecherspeichern()
 comment3.params=
-comment3.target=void\ buechersortierenIsbn()
+comment3.target=void\ buechersortieren()
 comment4.params=
-comment4.target=void\ buechersortierenAutor()
-comment5.params=
-comment5.target=void\ buecherausgeben()
-comment6.params=zahl1\ zahl2
-comment6.target=void\ tausche(int,\ int)
-numComments=7
+comment4.target=void\ buecherausgeben()
+comment5.params=zahl1\ zahl2
+comment5.target=void\ tausche(int,\ int)
+numComments=6
